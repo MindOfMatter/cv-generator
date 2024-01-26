@@ -1,0 +1,89 @@
+{
+    "contact_info": {
+        "city": "place_your_city_here",
+        "address": "place_your_address_here",
+        "postal": "place_your_postal_code_here",
+        "complete_address": "place_your_complete_address_here",
+        "name": "place_your_name_here",
+        "phone": "place_your_phone_number_here",
+        "email": "place_your_email_here",
+        "linkedin": "place_your_linkedin_profile_here"
+    },
+    "professional_profile": {
+        "description": "place_your_description_here",
+        "status": "place_your_status_here"
+    },
+    "academic_education": {
+        "studies": [
+            {
+                "degree": "place_your_degree_here",
+                "institution": "place_your_institution_here",
+                "duration": {
+                    "end": "place_your_end_date_here"
+                }
+            },
+            {
+                "degree": "place_your_degree_here",
+                "institution": "place_your_institution_here",
+                "duration": {
+                    "start": "place_your_start_date_here",
+                    "end": "place_your_end_date_here"
+                }
+            },
+            {
+                "degree": "place_your_degree_here",
+                "institution": "place_your_institution_here",
+                "duration": {
+                    "end": "place_your_end_date_here"
+                }
+            }
+        ]
+    },
+    "professional_experience": {
+        "lastCompany": "place_your_last_company_name_here",
+        "jobs": [
+            {
+                "position": "place_your_position_here",
+                "company": "place_your_company_name_here",
+                "duration": {
+                    "start": "place_your_start_date_here",
+                    "end": "place_your_end_date_here"
+                },
+                "responsibilities": [
+                    "place_your_responsibilities_here"
+                ]
+            },
+            {
+                "position": "place_your_position_here",
+                "company": "place_your_company_name_here",
+                "duration": {
+                    "start": "place_your_start_date_here",
+                    "end": "place_your_end_date_here"
+                },
+                "responsibilities": [
+                    "place_your_responsibilities_here"
+                ]
+            },
+            {
+                "position": "place_your_position_here",
+                "company": "place_your_company_name_here",
+                "duration": {
+                    "end": "place_your_end_date_here"
+                },
+                "responsibilities": [
+                    "place_your_responsibilities_here"
+                ]
+            }
+        ]
+    },
+    "additional_experience": {
+        "items": [
+            "place_your_additional_experiences_here"
+        ]
+    },
+    "languages": {
+        "items": [
+            "place_your_languages_here"
+        ]
+    }
+}
