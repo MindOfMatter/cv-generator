@@ -28,10 +28,10 @@ CV_DATA_JSON_PATH = os.path.join(BASE_PATH, f'JSON/CV/LANGUAGES/{LANGUAGE}/cv_da
 FORMAT_JSON_PATH = os.path.join(BASE_PATH, f'JSON/CV/LANGUAGES/{LANGUAGE}/cv_format.json')
 
 # Get name
-my_data = load_json_file(SETUP_CONFIG_PATH)
+my_data = load_json_file(MY_DATA_JSON_PATH)
 name = my_data['contact_info']['name']
 
-OUTPUT_DOCX_PATH = os.path.join(BASE_PATH, f'RESULTS/CV/CV_{name}_{LANGUAGE}.docx')
+OUTPUT_DOCX_PATH = os.path.join(BASE_PATH, f'RESULTS/CV/CV_{name} [{LANGUAGE}].docx')
 
 # Call the script with the new arguments
 subprocess.call(["python", SCRIPT_TO_RUN, "cv=" + CV_DATA_JSON_PATH, "me=" + MY_DATA_JSON_PATH, FORMAT_JSON_PATH, OUTPUT_DOCX_PATH])

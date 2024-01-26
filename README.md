@@ -38,6 +38,7 @@ Here is the structure of the `setup.json` file:
 ```
 {
  "LIBRE_OFFICE_PATH": "path_to_your_libreoffice_executable",
+ "APPLICATIONS_TO_CLOSE": ["PDFXEdit.exe", "swriter.exe", "soffice.bin"],
  "LANGUAGE": "EN"  // Or "FR"
 }
 ```

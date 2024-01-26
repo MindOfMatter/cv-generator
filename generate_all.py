@@ -2,20 +2,40 @@ import os
 import subprocess
 import platform
 import sys
+import json
 
 
 # Constants
+# Constant for the setup configuration file path
+SETUP_CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'JSON/setup.json')
+
+def load_json_file(file_path):
+    """Load JSON file from the given path."""
+    with open(file_path, 'r', encoding='utf-8') as file:
+        print(f"Loading JSON from {file_path}")
+        return json.load(file)
+
+# Load configuration from setup.json
+config = load_json_file(SETUP_CONFIG_PATH)
+APPLICATIONS_TO_CLOSE = config['APPLICATIONS_TO_CLOSE']
+LANGUAGE = config['LANGUAGE']
+
 BASE_PATH = os.path.dirname(os.path.abspath(__file__))
+MY_DATA_JSON_PATH = os.path.join(BASE_PATH, f'JSON/ME/LANGUAGES/{LANGUAGE}/my_data.json')
+
+# Get name
+my_data = load_json_file(MY_DATA_JSON_PATH)
+name = my_data['contact_info']['name']
+
 SCRIPT_TO_RUN = os.path.join(BASE_PATH, '_DOCX_generator.py')
 CV_SCRIPT_TO_RUN = os.path.join(BASE_PATH, 'CV_generator.py')
 PDF_SCRIPT_TO_RUN = os.path.join(BASE_PATH, '_DOCXS_to_PDF_covertor.py')
 
 COMPANIES_FOLDER_PATH = os.path.join(BASE_PATH, 'JSON/JOB/COMPANIES')
 RESULTS_FOLDER_PATH = os.path.join(BASE_PATH, 'RESULTS/JOB/')
-FORMAT_JSON_PATH = os.path.join(BASE_PATH, 'JSON/JOB/job_format.json')
-CV_OUTPUT_DOCX_PATH = os.path.join(BASE_PATH, 'RESULTS/CV/CV_Mathieu_Martineau.docx')
+FORMAT_JSON_PATH = os.path.join(BASE_PATH, f'JSON/JOB/LANGUAGES/{LANGUAGE}/job_format.json')
 
-MY_DATA_JSON_PATH = os.path.join(BASE_PATH, 'JSON/ME/my_data.json')
+CV_OUTPUT_DOCX_PATH = os.path.join(BASE_PATH, f'RESULTS/CV/CV_{name} [{LANGUAGE}].docx')
 
 def close_applications():
     # Check if the operating system is Windows
@@ -23,8 +43,7 @@ def close_applications():
         print("This script is designed to run on Windows.")
         sys.exit(1)
 
-    applications_to_close = ["PDFXEdit.exe", "swriter.exe", "soffice.bin"]
-    for app in applications_to_close:
+    for app in APPLICATIONS_TO_CLOSE:
         try:
             print(f"Attempting to close {app}...")
             subprocess.call(["taskkill", "/im", app, "/f"])
@@ -41,7 +60,7 @@ def main():
     subprocess.call(["python", CV_SCRIPT_TO_RUN])
 
     # Process each company folder
-    company_folders = os.listdir(RESULTS_FOLDER_PATH)
+    company_folders = os.listdir(COMPANIES_FOLDER_PATH)
 
     for company_folder_index, company_folder_name in enumerate(company_folders, start=1):
         if company_folder_index > 1:
@@ -49,7 +68,12 @@ def main():
             close_applications()
 
         output_folder_path = os.path.join(RESULTS_FOLDER_PATH, company_folder_name)
-        output_docx_path = os.path.join(output_folder_path, f'lettre-de-presentation-mathieu-martineau ({company_folder_name}).docx')
+        
+        # Choose the file name based on the language
+        if LANGUAGE == 'FR':
+            output_docx_path = os.path.join(output_folder_path, f'lettre-de-presentation-{name} ({company_folder_name}) [{LANGUAGE}].docx')
+        else:  # Assuming 'EN' or any other language will use this format
+            output_docx_path = os.path.join(output_folder_path, f'cover-letter-{name} ({company_folder_name}) [{LANGUAGE}].docx')
         
         if not os.path.exists(output_folder_path):
             os.makedirs(output_folder_path)

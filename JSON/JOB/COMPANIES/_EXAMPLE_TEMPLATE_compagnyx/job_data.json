@@ -1,12 +1,12 @@
 {
     "dest": {
-        "city": "!!place!!",
-        "address": "!!address!!",
-        "postal": "!!postal!!",
-        "gender": "!!Madame, Monsieur!!",
-        "name": "!!name!!"
+        "city": "!!place_the_city!!",
+        "address": "!!place_the_address!!",
+        "postal": "!!place_the_postal_code!!",
+        "gender": "!!place_the_gender!!",
+        "name": "!!place_the_name!!"
     },
-    "title": "!!title!!",
-    "my_experience": "!!experience!!",
-    "site": "!!site!!"
+    "title": "!!place_the_title!!",
+    "my_experience": "!!place_the_experience!!",
+    "site": "!!place_the_site!!"
 }

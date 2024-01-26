@@ -1,4 +1,5 @@
 {
     "LIBRE_OFFICE_PATH": "C:\\Program Files\\LibreOffice\\program\\soffice.exe",
-    "LANGUAGE": "FR"
+    "APPLICATIONS_TO_CLOSE": ["PDFXEdit.exe", "swriter.exe", "soffice.bin"],
+    "LANGUAGE": "EN"
 }
