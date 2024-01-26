@@ -28,13 +28,22 @@ BASE_PATH = os.path.dirname(os.path.abspath(__file__))
 TMP_MERGED_DOCX = os.path.join(BASE_PATH, 'RESULTS', TMP_MERGED_FILENAME)
 
 def merge_docx(file1, file2, merged_file):
+    # Check if the first file exists
     if not os.path.exists(file1):
+        # If the first file doesn't exist, just use the second file
         merged_document = Document(file2)
     else:
+        # If the first file exists, start merging
         merged_document = Document(file1)
+
+        # Add a page break if the first file is not empty
+        if merged_document.paragraphs:
+            merged_document.add_page_break()
+
         # Load the second document
         doc2 = Document(file2)
         for element in doc2.element.body:
+            # Append each element of the second document to the merged document
             merged_document.element.body.append(element)
 
     # Save the merged document
