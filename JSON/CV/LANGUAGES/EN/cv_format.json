@@ -29,6 +29,10 @@
             {
                 "keys": ["me.contact_info.linkedin"],
                 "format": "LinkedIn : {0}"
+            },
+            {
+                "keys": ["me.contact_info.site"],
+                "format": "Github : {0}"
             }
         ],
         "format": "multi-line",
@@ -36,20 +40,11 @@
         "font-size":11
     },
     {
-        "tag": "paragraph",
-        "content": [
-            {
-                "format": ""
-            }
-        ],
-        "font-size": 4
-    },
-    {
         "tag": "heading",
         "content": [
             {
                 "keys": ["cv.professional_profile.title"],
-                "format": "{0}"
+                "format": "\n{0}"
             }
         ],
         "level": 1
@@ -168,20 +163,11 @@
         }
     },
     {
-        "tag": "paragraph",
-        "content": [
-            {
-                "format": ""
-            }
-        ],
-        "font-size": 4
-    },
-    {
         "tag": "heading",
         "content": [
             {
                 "keys": ["cv.languages.title"],
-                "format": "{0}"
+                "format": "\n{0}"
             }
         ],
         "level": 2,

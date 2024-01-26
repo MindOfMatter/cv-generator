@@ -7,7 +7,8 @@
         "name": "!!place_your_name_here!!",
         "phone": "!!place_your_phone_number_here!!",
         "email": "!!place_your_email_here!!",
-        "linkedin": "!!place_your_linkedin_profile_here!!"
+        "linkedin": "!!place_your_linkedin_profile_here!!",
+        "site": "!!place_your_site_here!!"
     },
     "professional_profile": {
         "description": "!!place_your_description_here!!",
