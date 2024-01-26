@@ -1,0 +1,12 @@
+{
+    "dest": {
+        "city": "!!place!!",
+        "address": "!!address!!",
+        "postal": "!!postal!!",
+        "gender": "!!Madame, Monsieur!!",
+        "name": "!!name!!"
+    },
+    "title": "!!title!!",
+    "my_experience": "!!experience!!",
+    "site": "!!site!!"
+}

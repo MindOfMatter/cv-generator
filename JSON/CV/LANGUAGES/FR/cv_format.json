@@ -1,0 +1,207 @@
+[
+    {
+        "tag": "heading",
+        "content": [
+            {
+                "keys": ["me.contact_info.name"],
+                "format": "{0}"
+            }
+        ],
+        "align": "center",
+        "level": 2,
+        "font-size":14
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["me.contact_info.complete_address"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["me.contact_info.phone"],
+                "format": "Phone: {0}"
+            },
+            {
+                "keys": ["me.contact_info.email"],
+                "format": "Courriel : {0}"
+            },
+            {
+                "keys": ["me.contact_info.linkedin"],
+                "format": "LinkedIn : {0}"
+            }
+        ],
+        "format": "multi-line",
+        "align": "center",
+        "font-size":11
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": ""
+            }
+        ],
+        "font-size": 4
+    },
+    {
+        "tag": "heading",
+        "content": [
+            {
+                "keys": ["cv.professional_profile.title"],
+                "format": "{0}"
+            }
+        ],
+        "level": 1
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["me.professional_profile.description"],
+                "format": "{0}"
+            }
+        ]
+    },
+    {
+        "tag": "heading",
+        "content": [
+            {
+                "keys": ["cv.academic_education.title"],
+                "format": "{0}"
+            }
+        ],
+        "level": 1
+    },
+    {
+        "tag": "table",
+        "each": {
+            "key": "me.academic_education.studies",
+            "vars": { "study": "me.academic_education.studies.{0}" },
+            "content": [
+                {
+                    "keys": ["study.duration.start", "study.duration.end", "study.degree", "study.institution"],
+                    "format": [
+                        "{0} - {1}",
+                        "{2}",
+                        "{3}"
+                    ]
+                }
+            ],
+            "align": "center",
+            "width":  [
+                1,
+                "fitauto",
+                2
+            ],
+            "height":22,
+            "font-size": 12
+        }
+    },
+    {
+        "tag": "heading",
+        "content": [
+            {
+                "keys": ["cv.professional_experience.title"],
+                "format": "{0}"
+            }
+        ],
+        "level": 1
+    },
+    {
+        "tag": "table",
+        "each": {
+            "key": "me.professional_experience.jobs",
+            "vars": { "job": "me.professional_experience.jobs.{0}" },
+            "content": [
+                {
+                    "keys": ["job.duration.start", "job.duration.end", "job.position", "job.company"],
+                    "format": [
+                        "{0} - {1}",
+                        "{2}",
+                        "{3}"
+                    ]
+                }
+            ],
+            "align": "center",
+            "width":  [
+                1,
+                "fitauto",
+                2
+            ],
+            "height": 22,
+            "font-size": 12,
+            "space_before": 8,
+            "each": {
+                "key": "job.responsibilities",
+                "content": [
+                    {
+                        "keys": ["item"],
+                        "format": "• {0}"
+                    }
+                ],
+                "height": 22
+            }
+        }
+    },
+    {
+        "tag": "heading",
+        "content": [
+            {
+                "keys": ["cv.additional_experience.title"],
+                "format": "{0}"
+            }
+        ],
+        "level": 1
+    },
+    {
+        "tag": "paragraph",
+        "each": {
+            "key": "me.additional_experience.items",
+            "content": [
+                {
+                    "keys": ["item"],
+                    "format": "• {0}"
+                }
+            ],
+            "separator": "\n"
+        }
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": ""
+            }
+        ],
+        "font-size": 4
+    },
+    {
+        "tag": "heading",
+        "content": [
+            {
+                "keys": ["cv.languages.title"],
+                "format": "{0}"
+            }
+        ],
+        "level": 2,
+        "align": "center",
+        "font-size":12
+    },
+    {
+        "tag": "paragraph",
+        "each": {
+            "key": "me.languages.items",
+            "content": [
+                {
+                    "keys": ["item"],
+                    "format": "{0}"
+                }
+            ],
+            "separator": ", "
+        },
+        "format": "multi-line",
+        "align": "center",
+        "font-size":10
+    }
+]

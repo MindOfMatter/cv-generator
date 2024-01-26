@@ -1,0 +1,20 @@
+{
+    "contact_info": {
+        "title": "Contact Information"
+    },
+    "professional_profile": {
+        "title": "Profil Professionnel"
+    },
+    "academic_education": {
+        "title": "Formation Académique"
+    },
+    "professional_experience": {
+        "title": "Expérience Professionnelle"
+    },
+    "additional_experience": {
+        "title": "Développement d'Outils et Contributions au Modding"
+    },
+    "languages": {
+        "title": "Langues"
+    }
+}

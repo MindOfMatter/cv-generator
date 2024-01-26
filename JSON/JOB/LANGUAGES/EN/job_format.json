@@ -1,0 +1,123 @@
+[
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["source.place", "current_date"],
+                "format": "\n\n{0}, on {1}\n"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["dest.name"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["dest.address"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["dest.place", "dest.postal"],
+                "format": "{0} {1}"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["title"],
+                "format": "\nSubject: Application for the position {0}\n"
+            }
+        ],
+        "font-style": "bold"
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["dest.gender"],
+                "format": "{0},"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["site", "title"],
+                "format": "\nFollowing the advertisement on the site {0}, I wish to apply for the \"{1}\" position available within your company."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["lastCompany", "experience", "status"],
+                "format": "\nHaving worked as an employee at {0}, in the computer field, I had the opportunity to develop, among other things, {1}. Moreover, as I am {2}, I will be available immediately."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": "\nEnclosed you will find my curriculum vitae which will provide you with more information about my training and professional experience. Furthermore, I am fully available for an interview at a time that suits you."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["dest.gender"],
+                "format": "\nLooking forward to a positive response, I beg you to accept, {0}, my most distinguished salutations."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": "\n\n\n\n\n"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["source.name"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["source.address"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["source.place", "source.postal"],
+                "format": "{0} {1}"
+            },
+            {
+                "keys": ["source.phone"],
+                "format": "Phone: {0}"
+            },
+            {
+                "keys": ["source.email"],
+                "format": "Email: {0}"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": "p.s. Curriculum Vitae"
+            }
+        ]
+    }
+]
