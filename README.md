@@ -117,4 +117,4 @@ Contributions to CV-Generator are welcome! Please read `CONTRIBUTING.md` for det
 This project is licensed under the MIT License - see the `LICENSE` file for details.
 
 ## Acknowledgments
-- Thanks to all contributors who have helped to build this tool.
+- Thanks to all possible contributors who have helped to build this tool.
