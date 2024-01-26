@@ -1,12 +1,27 @@
 # CV-Generator
 
 ## Overview
-CV-Generator is a Python-based application designed to automate the creation of professional CVs and job applications. It includes modules for DOCX generation, PDF conversion, and JSON data integration, offering a complete solution for personalized resume and cover letter creation.
+CV-Generator is a Python-based application designed to automate the creation of professional CVs and job applications. It includes modules for DOCX generation, PDF conversion, and JSON data integration, offering a complete solution for personalized resume and cover letter creation. The application supports both English (EN) and French (FR) versions, allowing for multilingual document generation.
+
+## Why CV-Generator is Useful
+
+The CV-Generator streamlines the process of creating personalized and professional CVs and job applications, offering several key benefits:
+
+- **Time Efficiency**: Automates the repetitive task of formatting and structuring CVs and cover letters, saving valuable time for job seekers.
+- **Consistency and Accuracy**: Ensures consistent formatting and layout across different applications, reducing the likelihood of errors and discrepancies in personal and professional information.
+- **Customization and Flexibility**: Offers the ability to easily tailor CVs and cover letters for specific job applications or industries by simply updating JSON data files.
+- **Multilingual Capabilities**: With support for both English and French, the CV-Generator caters to a diverse user base, facilitating bilingual document creation.
+- **Scalability**: Ideal for generating multiple CVs and cover letters efficiently, particularly beneficial for freelancers, consultants, and job seekers targeting multiple roles or companies.
+- **Professional Presentation**: By utilizing customizable templates, the tool aids in producing clean, professionally formatted documents that make a strong first impression.
+- **Ease of Use**: Designed to be user-friendly, it requires minimal technical expertise, making it accessible to a wide range of users.
+
+In summary, CV-Generator is an invaluable tool for anyone looking to enhance their job application process, offering a blend of efficiency, professionalism, and customization.
 
 ## Features
 - **DOCX Creation**: Generates CVs in DOCX format using customizable templates.
 - **PDF Conversion**: Converts DOCX files to PDF format for broader accessibility.
-- **Data Merging**: Integrates personal and professional data from JSON sources into CV templates.
+- **Data Merging**: Integrates personal, professional, and job-specific data from JSON sources into CV templates.
+- **Multilingual Support**: Offers template and data management for both English and French languages.
 
 ## Prerequisites
 - Python 3.x
@@ -33,17 +48,36 @@ The application requires specific JSON files for data input:
 Place these files in a directory structured as follows:
 ```
 PROJECT_ROOT/
-|-- JSON/
-|   |-- ME/
-|   |   `-- my_data.json
-|   |-- CV/
-|   |   |-- cv_data.json
-|   |   `-- cv_format.json
-|   `-- JOB/
-|       |-- COMPANIES/
-|       |   `-- [Company Name]/
-|       |       |-- job_data.json
-|       |       `-- job_format.json
++---JSON
+|   +---CV
+|   |   \---LANGUAGES
+|   |       +---EN
+|   |       |       cv_data.json
+|   |       |       cv_format.json
+|   |       |
+|   |       \---FR
+|   |               cv_data.json
+|   |               cv_format.json
+|   |
+|   +---JOB
+|   |   +---COMPANIES
+|   |   |   \---_EXAMPLE_TEMPLATE_compagnyx
+|   |   |           job_data.json
+|   |   |
+|   |   \---LANGUAGES
+|   |       +---EN
+|   |       |       job_format.json
+|   |       |
+|   |       \---FR
+|   |               job_format.json
+|   |
+|   \---ME
+|       \---LANGUAGES
+|           +---EN
+|           |       my_data.json
+|           |
+|           \---FR
+|                   my_data.json
 `-- RESULTS/
     |-- CV/
     |   |-- CV_[my_data.name].docx
