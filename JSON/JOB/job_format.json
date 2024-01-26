@@ -1,0 +1,123 @@
+[
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["me.contact_info.city", "current_date"],
+                "format": "\n\n{0}, le {1}\n"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["job.dest.name"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["job.dest.address"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["job.dest.city", "job.dest.postal"],
+                "format": "{0} {1}"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["job.title"],
+                "format": "\nObjet : Candidature pour le poste {0}\n"
+            }
+        ],
+        "font-style": "bold"
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["job.dest.gender"],
+                "format": "{0},"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["job.site", "job.title"],
+                "format": "\nPour faire suite à l'annonce parue sur le site {0}, je désire poser ma candidature pour le poste \"{1}\" vacant au sein de votre entreprise."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["me.professional_experience.lastCompany", "job.my_experience", "me.professional_profile.status"],
+                "format": "\nAyant travaillé comme employé chez {0}, dans le milieu informatique, j'ai eu l'occasion de développer, entre autres, {1} . De plus, puisque je suis {2}, je serai disponible dès maintenant."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": "\nVous trouverez ci-joint mon curriculum vitae qui vous fournira de plus amples informations sur ma formation et mon expérience professionnelle. Par ailleurs, je demeure entièrement disponible pour une entrevue, et ce, au moment qui vous conviendra."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["job.dest.gender"],
+                "format": "\nDans l’attente d’une réponse favorable, je vous prie d’agréer, {0}, mes salutations les plus distinguées."
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": "\n\n\n\n\n"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "keys": ["me.contact_info.name"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["me.contact_info.address"],
+                "format": "{0}"
+            },
+            {
+                "keys": ["me.contact_info.city", "me.contact_info.postal"],
+                "format": "{0} {1}"
+            },
+            {
+                "keys": ["me.contact_info.phone"],
+                "format": "Téléphone : {0}"
+            },
+            {
+                "keys": ["me.contact_info.email"],
+                "format": "Courriel : {0}"
+            }
+        ]
+    },
+    {
+        "tag": "paragraph",
+        "content": [
+            {
+                "format": "p.j. Curriculum vitae"
+            }
+        ]
+    }
+]
