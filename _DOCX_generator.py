@@ -21,7 +21,20 @@ BOTTOM_MARGIN = MARGIN
 HEADING_FONT_SIZE = Pt(14)
 PARAGRAPH_FONT_SIZE = Pt(11)
 
-LIBRE_OFFICE_PATH = 'C:\\Program Files\\LibreOffice\\program\\soffice.exe'  # Update this path as per your installation
+# Constant for the setup configuration file path
+SETUP_CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'JSON/setup.json')
+
+def load_json_file(file_path):
+    """Load JSON file from the given path."""
+    with open(file_path, 'r', encoding='utf-8') as file:
+        print(f"Loading JSON from {file_path}")
+        return json.load(file)
+
+# Load configuration from setup.json
+config = load_json_file(SETUP_CONFIG_PATH)
+
+# Use the configuration values
+LIBRE_OFFICE_PATH = config['LIBRE_OFFICE_PATH']
 
 def format_current_date():
     # French months
@@ -65,12 +78,6 @@ def merge_json_data(json_paths):
         except Exception as e:
             print(f"Error loading JSON file {path}: {e}")
     return merged_data
-
-def load_json_file(file_path):
-    """Load JSON file from the given path."""
-    with open(file_path, 'r', encoding='utf-8') as file:
-        print(f"Loading JSON from {file_path}")
-        return json.load(file)
 
 def get_data(data, key, current_item=None, indexes=None):
     """Retrieve data for a given key."""

@@ -1,3 +1,4 @@
+import json
 import subprocess
 import os
 import sys
@@ -6,7 +7,20 @@ import shutil
 import time
 
 # Constants
-LIBRE_OFFICE_PATH = r"C:\Program Files\LibreOffice\program\soffice.exe"
+# Constant for the setup configuration file path
+SETUP_CONFIG_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'JSON/setup.json')
+
+def load_json_file(file_path):
+    """Load JSON file from the given path."""
+    with open(file_path, 'r', encoding='utf-8') as file:
+        print(f"Loading JSON from {file_path}")
+        return json.load(file)
+
+# Load configuration from setup.json
+config = load_json_file(SETUP_CONFIG_PATH)
+
+# Use the configuration values
+LIBRE_OFFICE_PATH = config['LIBRE_OFFICE_PATH']
 TMP_MERGED_FILENAME = '.tmp_merged.docx'
 PDF_EXTENSION = '.pdf'
 DOCX_EXTENSION = '.docx'

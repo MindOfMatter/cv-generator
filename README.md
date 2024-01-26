@@ -27,6 +27,21 @@ In summary, CV-Generator is an invaluable tool for anyone looking to enhance the
 - Python 3.x
 - LibreOffice (for DOCX to PDF conversion)
 
+## Configuration Setup
+The application uses a `setup.json` file in the JSON directory for easy configuration of common settings:
+- `LIBRE_OFFICE_PATH`: Specifies the path to the LibreOffice executable, used for PDF conversion.
+- `LANGUAGE`: Determines the language (either 'EN' or 'FR') for document generation.
+
+This approach prevents the need for hardcoding these values within the script, offering flexibility and ease of updates.
+
+Here is the structure of the `setup.json` file:
+```
+{
+ "LIBRE_OFFICE_PATH": "path_to_your_libreoffice_executable",
+ "LANGUAGE": "EN"  // Or "FR"
+}
+```
+
 ## Installation
 1. Clone the repository:
 ```
@@ -49,6 +64,7 @@ Place these files in a directory structured as follows:
 ```
 PROJECT_ROOT/
 +---JSON
+|   setup.json
 |   +---CV
 |   |   \---LANGUAGES
 |   |       +---EN
