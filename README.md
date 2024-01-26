@@ -114,7 +114,7 @@ python generate_all.py
 Contributions to CV-Generator are welcome! Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
 
 ## License
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the GPL-3.0 license - see the `LICENSE` file for details.
 
 ## Acknowledgments
 - Thanks to all possible contributors who have helped to build this tool.
