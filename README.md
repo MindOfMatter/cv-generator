@@ -1,7 +1,7 @@
 # CV-Generator
 
 ## Overview
-CV-Generator is a Python-based application designed to automate the creation of professional CVs. It includes modules for DOCX generation, PDF conversion, and JSON data integration, offering a complete solution for personalized resume creation.
+CV-Generator is a Python-based application designed to automate the creation of professional CVs and job applications. It includes modules for DOCX generation, PDF conversion, and JSON data integration, offering a complete solution for personalized resume and cover letter creation.
 
 ## Features
 - **DOCX Creation**: Generates CVs in DOCX format using customizable templates.
