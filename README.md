@@ -111,6 +111,9 @@ Run `generate_all.py` to generate a CV with for each Company (from JSON provided
 python generate_all.py
 ```
 
+## Example (dummy content)
+https://github.com/MindOfMatter/cv-generator/blob/main/cover-letter-!!place_your_name_here!!%20(_EXAMPLE_TEMPLATE_compagnyx)%20%5BEN%5D.pdf
+
 ## Contributing
 Contributions to CV-Generator are welcome! Please read `CONTRIBUTING.md` for details on our code of conduct and the process for submitting pull requests.
 
