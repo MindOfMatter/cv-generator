@@ -35,19 +35,22 @@ config = load_json_file(SETUP_CONFIG_PATH)
 
 # Use the configuration values
 LIBRE_OFFICE_PATH = config['LIBRE_OFFICE_PATH']
+LANGUAGE = config['LANGUAGE']
 
 def format_current_date():
-    # French months
-    months = [
-        "janvier", "février", "mars", "avril", "mai", "juin", 
-        "juillet", "août", "septembre", "octobre", "novembre", "décembre"
-    ]
-
-    # Get current date
     now = datetime.datetime.now()
 
-    # Format the date - '29 mai 2017' format
-    return f"{now.day} {months[now.month - 1]} {now.year}"
+    if LANGUAGE == "FR":
+        # French months
+        months = [
+            "janvier", "février", "mars", "avril", "mai", "juin", 
+            "juillet", "août", "septembre", "octobre", "novembre", "décembre"
+        ]
+        # Format the date - '29 mai 2017' format
+        return f"{now.day} {months[now.month - 1]} {now.year}"
+    else:  # English (Canada) date format
+        # Format the date - 'May 29, 2017' format
+        return now.strftime("%B %d, %Y")
 
 
 def open_docx_with_libreoffice(file_path):
