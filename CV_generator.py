@@ -26,6 +26,7 @@ LANGUAGE = config['LANGUAGE']
 MY_DATA_JSON_PATH = os.path.join(BASE_PATH, f'JSON/ME/LANGUAGES/{LANGUAGE}/my_data.json')
 CV_DATA_JSON_PATH = os.path.join(BASE_PATH, f'JSON/CV/LANGUAGES/{LANGUAGE}/cv_data.json')
 FORMAT_JSON_PATH = os.path.join(BASE_PATH, f'JSON/CV/LANGUAGES/{LANGUAGE}/cv_format.json')
+PDF_SCRIPT_TO_RUN = os.path.join(BASE_PATH, '_DOCXS_to_PDF_covertor.py')
 
 # Get name
 my_data = load_json_file(MY_DATA_JSON_PATH)
@@ -35,3 +36,7 @@ OUTPUT_DOCX_PATH = os.path.join(BASE_PATH, f'RESULTS/CV/CV_{name} [{LANGUAGE}].d
 
 # Call the script with the new arguments
 subprocess.call(["python", SCRIPT_TO_RUN, "cv=" + CV_DATA_JSON_PATH, "me=" + MY_DATA_JSON_PATH, FORMAT_JSON_PATH, OUTPUT_DOCX_PATH])
+
+# Convert DOCX to PDF
+subprocess.call(["python", PDF_SCRIPT_TO_RUN, OUTPUT_DOCX_PATH])
+

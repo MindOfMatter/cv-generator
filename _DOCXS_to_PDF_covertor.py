@@ -96,6 +96,9 @@ def finalize_to_pdf(source_file, output_file):
     convert_to_pdf(source_file)
     rename_and_move_pdf(source_file, output_file)
     remove_file(source_file)
+    open_pdf(output_file)
+    
+def open_pdf(output_file):
     final_pdf_output = os.path.splitext(output_file)[0] + '.pdf'
     print("PDF Document Generated Successfully.")
     print(f"Opening the PDF document: {final_pdf_output}")
@@ -116,16 +119,18 @@ def main():
     else:
         print("Missing parameters")
         sys.exit(1)
+        
+    if len(docx_files) == 1:
+        convert_to_pdf(docx_files[0])
+        open_pdf(docx_files[0])
+        sys.exit(0)
 
     if len(docx_files) < 2:
-        print("At least two DOCX files are required.")
-        sys.exit(1)
-
-    for file in reversed(docx_files):
-        merge_docx(TMP_MERGED_DOCX, file, TMP_MERGED_DOCX)
-
-    lastFile = docx_files[-1]
-    finalize_to_pdf(TMP_MERGED_DOCX, lastFile)
+        for file in reversed(docx_files):
+            merge_docx(TMP_MERGED_DOCX, file, TMP_MERGED_DOCX)
+        lastFile = docx_files[-1]
+    
+        finalize_to_pdf(TMP_MERGED_DOCX, lastFile)
 
 if __name__ == "__main__":
     main()
